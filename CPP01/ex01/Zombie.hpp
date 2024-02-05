@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 14:44:16 by mgiovana          #+#    #+#             */
-/*   Updated: 2024/02/01 14:44:17 by mgiovana         ###   ########.fr       */
+/*   Created: 2024/02/05 13:47:57 by mgiovana          #+#    #+#             */
+/*   Updated: 2024/02/05 13:47:58 by mgiovana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-Zombie* newZombie(std::string name)
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+class Zombie
 {
-    Zombie* zombie;
+    public:
+        Zombie(void);
+        ~Zombie(void);
+        void    announce(void);
+        void    setName (std::string name);
+    private:
+        std::string _name;
+};
+    Zombie* zombieHorde( int number, std::string name );
 
-    zombie = new Zombie(name);
-
-    return zombie;
-}    
+#endif

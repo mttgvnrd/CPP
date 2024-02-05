@@ -5,14 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/01 14:42:52 by mgiovana          #+#    #+#              #
-#    Updated: 2024/02/01 14:42:56 by mgiovana         ###   ########.fr        #
+#    Created: 2024/02/05 15:24:02 by mgiovana          #+#    #+#              #
+#    Updated: 2024/02/05 15:24:04 by mgiovana         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME = Zombie
-SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+NAME = Brain
+SRC = main.cpp
 OBJ_DIR = ./.obj/
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

@@ -15,13 +15,14 @@
 
 Zombie::Zombie(std::string name)
 {
-    this->_name = _name;
+    this->_name = name;
     return;
 }
 
 Zombie::~Zombie()
 {
-
+ std::cout << this->_name << ": is out, goodbye!" <<std::endl;
+ return;
 }
 
 void Zombie::announce(void)
