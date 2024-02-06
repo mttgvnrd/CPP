@@ -18,7 +18,7 @@
 class HumanB
 {
     private:
-		Weapon		*_gun;
+		Weapon		*_randomWeapon;
 		std::string	_name;
    
     public:

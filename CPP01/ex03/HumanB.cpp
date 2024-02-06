@@ -15,7 +15,7 @@
 HumanB::HumanB( std::string name)
 {
     this->_name = name;
-    this->_gun = NULL;
+    this->_randomWeapon = NULL;
     return ;
 }
 
@@ -26,14 +26,14 @@ HumanB::~HumanB(void)
 
 void    HumanB::attack(void)
 {
-	if (this->_gun != NULL)
-        std::cout << this->_name << " attacks with their " << this->_gun->getType() << std::endl;
+	if (this->_randomWeapon != NULL)
+        std::cout << this->_name << " attacks with their " << this->_randomWeapon->getType() << std::endl;
 	else
 	    return ;
 }
 
 void	HumanB::setWeapon( Weapon& weapon )
 {
-	this->_gun = &weapon;
+	this->_randomWeapon = &weapon;
 	return ;
 }

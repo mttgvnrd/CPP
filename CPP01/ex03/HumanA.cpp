@@ -12,7 +12,7 @@
 
 #include "HumanA.hpp"
 
-HumanA::HumanA( std::string name, Weapon& weapon) : _gun(weapon)
+HumanA::HumanA( std::string name, Weapon& weapon) : _randomWeapon(weapon)
 {
     this->_name = name;
     return;
@@ -25,7 +25,7 @@ HumanA::~HumanA(void)
 
 void    HumanA::attack(void)
 {
-    std::cout << this->_name << " attacks with their " << this->_gun.getType() << std::endl;
+    std::cout << this->_name << " attacks with their " << this->_randomWeapon.getType() << std::endl;
     return;
 }
 
