@@ -10,4 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
+#include "Weapon.hpp"
+
+class HumanB
+{
+    private:
+		Weapon		*_gun;
+		std::string	_name;
+   
+    public:
+        HumanB(std::string name);
+        ~HumanB(void);
+
+        void  attack(void);
+		void	setWeapon( Weapon& weapon );
+
+};
+
+
+#endif
