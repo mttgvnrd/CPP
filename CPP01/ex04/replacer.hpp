@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   replacer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 14:43:29 by mgiovana          #+#    #+#             */
-/*   Updated: 2024/02/01 14:43:31 by mgiovana         ###   ########.fr       */
+/*   Created: 2024/02/08 12:49:05 by mgiovana          #+#    #+#             */
+/*   Updated: 2024/02/08 12:49:07 by mgiovana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "Zombie.hpp"
+#ifndef REPLACER_HPP
+# define REPLACER_HPP
 
-Zombie::Zombie(std::string name)
-{
-    this->_name = name; //per assegnare allo Zombie il nome che gli e stato passato
-    return;
-}
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <fstream>
+#include <sstream>
 
-Zombie::~Zombie()
-{
- std::cout << this->_name << ": is out, goodbye!" <<std::endl;
- return;
-}
+void    replaceInFile(std::string filename, std::string s1, std::string s2);
+int check_input(int argc, char* argv[], std::string filename);
 
-void Zombie::announce(void)
-{
- std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." <<std::endl;
-}
+
+#endif
