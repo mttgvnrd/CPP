@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 14:42:12 by mgiovana          #+#    #+#             */
-/*   Updated: 2024/02/19 14:42:15 by mgiovana         ###   ########.fr       */
+/*   Created: 2024/02/20 15:17:18 by mgiovana          #+#    #+#             */
+/*   Updated: 2024/02/20 15:17:19 by mgiovana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,106 @@ std::ostream& operator<<(std::ostream& os, const FixedPN& f)
 {
 	os << f.toFloat();
 	return os;
+}
+
+//OVERLOAD  il quale converte gli oggetti in float prima
+// di fare l operazione
+FixedPN FixedPN::operator+(const FixedPN& add) const
+{
+	return FixedPN(toFloat() + add.toFloat());
+}
+
+FixedPN FixedPN::operator-(const FixedPN& sub) const
+{
+    return FixedPN(toFloat() - sub.toFloat());
+}
+
+FixedPN FixedPN::operator*(const FixedPN& mult) const
+{
+    return FixedPN(toFloat() * mult.toFloat());  
+}
+
+FixedPN FixedPN::operator/(const FixedPN& mult) const
+{
+    return FixedPN(toFloat() / mult.toFloat());
+}
+
+//OVERLOAD post-incremento
+FixedPN FixedPN::operator++(int)
+{
+    FixedPN tmp(*this);
+	fixedPoint++;
+	return tmp;
+}
+
+//OVERLOAD pre-incremento
+FixedPN& FixedPN::operator++(void)
+{
+	++fixedPoint;
+	return *this;
+}
+
+//OVERLOAD post-decremento
+FixedPN FixedPN::operator--(int)
+{
+    FixedPN tmp(*this);
+	fixedPoint--;
+	return tmp;
+}
+
+//OVERLOAD pre-decremento
+FixedPN& FixedPN::operator--(void)
+{
+	--fixedPoint;
+	return *this;
+}
+
+bool FixedPN::operator>(const FixedPN &cmp) const
+{
+    return (this->toFloat() > cmp.toFloat());
+}
+
+bool FixedPN::operator<(const FixedPN &cmp) const
+{
+    return (this->toFloat() < cmp.toFloat());
+}
+
+bool FixedPN::operator>=(const FixedPN &cmp) const
+{
+    return (this->toFloat() >= cmp.toFloat());
+}
+
+bool FixedPN::operator<=(const FixedPN &cmp) const
+{
+    return (this->toFloat() <= cmp.toFloat());
+}
+
+bool FixedPN::operator==(const FixedPN &cmp) const
+{
+    return (this->toFloat() == cmp.toFloat());
+}
+
+bool FixedPN::operator!=(const FixedPN &cmp) const
+{
+    return (this->toFloat() != cmp.toFloat());
+}
+
+//Per oggetti modificabili
+FixedPN& FixedPN::min(FixedPN& x, FixedPN& y)
+{
+	return (x < y ? x : y);
+}
+
+FixedPN& FixedPN::max(FixedPN& x, FixedPN& y)
+{
+	return (x > y ? x : y);
+}
+
+//Per oggetti non modificabili
+const FixedPN& FixedPN::min(const FixedPN& x, const FixedPN& y){
+	return (x < y ? x : y);
+}
+
+const FixedPN& FixedPN::max(const FixedPN& x, const FixedPN& y){
+	return (x > y ? x : y);
 }

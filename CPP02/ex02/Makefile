@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/19 14:41:45 by mgiovana          #+#    #+#              #
-#    Updated: 2024/02/19 14:41:46 by mgiovana         ###   ########.fr        #
+#    Created: 2024/02/20 15:16:51 by mgiovana          #+#    #+#              #
+#    Updated: 2024/02/20 15:16:53 by mgiovana         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = FixedPointNumbers
 SRC = main.cpp Fixed.cpp

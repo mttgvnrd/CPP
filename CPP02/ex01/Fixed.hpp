@@ -23,9 +23,10 @@ class FixedPN
         FixedPN(const int i);
         FixedPN(const float f);
         ~FixedPN();
-        FixedPN(FixedPN& other);
-        FixedPN& operator = (FixedPN& other);
-        int getRawBits();
+        FixedPN(const FixedPN& other);
+        FixedPN& operator = (const FixedPN& other);
+
+        int getRawBits() const;
         void setRawBits(int const raw);
         float toFloat(void) const;
         int toInt(void) const;
@@ -35,5 +36,6 @@ class FixedPN
         static const int fractionalBits = 8;
 };
 
+std::ostream& operator<<(std::ostream& os, const FixedPN& f);
 
 #endif
