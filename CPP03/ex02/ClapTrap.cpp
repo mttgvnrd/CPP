@@ -72,5 +72,11 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     else 
         std::cout << "ClapTrap " << this->_name << "doesn't have enough energy points" << std::endl;
-
 }
+
+std::string ClapTrap::GetName() const
+{
+    return this->_name;
+}
+
+

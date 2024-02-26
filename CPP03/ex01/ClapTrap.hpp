@@ -19,22 +19,24 @@
 
 class ClapTrap
 {
-    private:
+    protected:
             std::string _name;
             int         _hp;
             int         _ep;
             int         _ad;
-            ClapTrap();
 
     public:
             ClapTrap(const std::string& Name );
             ClapTrap(const ClapTrap& src);
-            ClapTrap& operator=(const ClapTrap& other);
+            ClapTrap();
             ~ClapTrap();
+
+            ClapTrap& operator=(const ClapTrap& other);
 
             void attack(const std::string& target);
             void takeDamage(unsigned int amount);
             void beRepaired(unsigned int amount);
+            std::string GetName() const;
             
 };
 

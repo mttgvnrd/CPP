@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 15:54:28 by mgiovana          #+#    #+#             */
-/*   Updated: 2024/02/21 15:54:30 by mgiovana         ###   ########.fr       */
+/*   Created: 2024/02/23 15:02:21 by mgiovana          #+#    #+#             */
+/*   Updated: 2024/02/23 15:02:23 by mgiovana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
+
 #include "ClapTrap.hpp"
 
-int     main(int argc, char **argv)
+class ScavTrap : public ClapTrap
 {
-    std::string name1 = "Red";
-    std::string name2 = "Blue";
-    
-    (void)argv;
-    (void)argc;
-	ClapTrap Red(name1);
-	ClapTrap Blue(name2);
-    Red.attack(name2);
-    Blue.takeDamage(5);
-	Blue.beRepaired(5);
-}
+
+    public:
+        ScavTrap();
+        ~ScavTrap();
+        ScavTrap(std::string& name);
+        ScavTrap(ScavTrap const &src);
+
+		ScavTrap& operator=(const ScavTrap& other);
+
+        void guardGate() const;
+        void attack(const std::string& target);
+
+        
+};
+
+#endif
