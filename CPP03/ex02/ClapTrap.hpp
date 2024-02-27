@@ -26,9 +26,8 @@ class ClapTrap
             int         _ad;
 
     public:
-            ClapTrap(const std::string& Name );
+            ClapTrap(const std::string& name );
             ClapTrap(const ClapTrap& src);
-            ClapTrap();
             ~ClapTrap();
 
             ClapTrap& operator=(const ClapTrap& other);

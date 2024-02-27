@@ -38,7 +38,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 ScavTrap::ScavTrap(std::string& name): ClapTrap(name)
 {
 	std::cout << "ScavTrap default constructor" << std::endl;
-	std::cout << "ScavTrap initialized parameters" << std::endl;
+	//std::cout << "ScavTrap initialized parameters" << std::endl;
 	this->_hp = 100;
 	this->_ep = 50;
 	this->_ad = 20;
@@ -46,10 +46,10 @@ ScavTrap::ScavTrap(std::string& name): ClapTrap(name)
 
 void ScavTrap::guardGate() const
 {
-	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode " << std::endl;
+	std::cout << "ScavTrap" << this->_name << " is now in Gate keeper mode " << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target)
 {
-        std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
+        std::cout << "ScavTrap" << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
 }

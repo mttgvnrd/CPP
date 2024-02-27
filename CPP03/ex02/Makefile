@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = ClapTrap2
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ_DIR = ./.obj/
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

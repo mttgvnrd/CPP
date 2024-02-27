@@ -13,11 +13,6 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
-{
-        std::cout << "Constructor called" << std::endl;
-}
-
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
     std::cout << "Copy constructor called" << std::endl;
@@ -42,14 +37,15 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other){
 
 ClapTrap::ClapTrap(const std::string& Name): _name(Name), _hp(10), _ep(10), _ad(0)
 {
-    std::cout << "Initialized parameters" << std::endl;
+    std::cout << "Constructor called" << std::endl;
+    //std::cout << "Initialized parameters" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
 {
     if (this->_ep > 0)
     {
-        std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
+        std::cout << "ClapTrap " << this->_name << "attacks " << target << ", causing " << this->_ad << " points of damage!" << std::endl;
          _ep--;
     }
     else 
@@ -58,7 +54,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    std::cout << "ClapTrap " << this->_name << " lose " << amount << " hp" << std::endl;
+    std::cout << "ClapTrap " << this->_name << "lose " << amount << " hp" << std::endl;
     _hp -= amount;
 }
 
@@ -66,7 +62,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_ep)
     {
-        std::cout << "ClapTrap " << this->_name << " repair " << amount << " hp" << std::endl;
+        std::cout << "ClapTrap " << this->_name << "repair " << amount << " hp" << std::endl;
         _hp += amount;
         _ep--;
     }

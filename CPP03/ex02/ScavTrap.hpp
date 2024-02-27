@@ -20,10 +20,9 @@ class ScavTrap : public ClapTrap
 {
 
     public:
-        ScavTrap();
-        ~ScavTrap();
         ScavTrap(std::string& name);
         ScavTrap(ScavTrap const &src);
+        ~ScavTrap();
 
 		ScavTrap& operator=(const ScavTrap& other);
 
