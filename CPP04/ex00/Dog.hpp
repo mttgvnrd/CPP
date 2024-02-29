@@ -22,7 +22,12 @@ class Dog : public Animal
     public:
         Dog();
         ~Dog();
-        virtual void makeSound(void);
+        Dog(Dog const &src);
+        Dog &   operator=(Dog const &src);
+
+        void makeSound() const;
+    private:
+        std::string type;
 };
 
 

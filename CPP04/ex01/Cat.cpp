@@ -16,10 +16,12 @@ Cat::Cat() : Animal::Animal("Cat")
 {
     std::cout << "Cat constructor" << std::endl;
 	this->type = Animal::getType();
+    this->brain = new Brain();
 }
 
 Cat::~Cat()
 {
+    delete this->brain;
     std::cout << "Cat destructor" << std::endl;
 }
 

@@ -13,19 +13,31 @@
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal::Animal("Dog")
 {
     std::cout << "Dog constructor" << std::endl;
-    type = "Dog";
+	this->type = Animal::getType();
 }
 
 Dog::~Dog()
 {
     std::cout << "Dog destructor" << std::endl;
-    type = "Dog";
 }
 
-void Dog::makeSound()
+Dog::Dog(Dog const &src) : Animal::Animal(src)
+{
+    std::cout << "Dog Copy constructor" << std::endl;
+	*this = src;
+}
+
+Dog &   Dog::operator=(Dog const &src)
+{
+    if (this != &src)
+		this->type = src.type;
+	return *this;
+}
+
+void Dog::makeSound() const
 {
     std::cout << "Bau Bau Bau" << std::endl;
 }

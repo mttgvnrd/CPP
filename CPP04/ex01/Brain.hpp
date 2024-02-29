@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgiovana <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 14:22:03 by mgiovana          #+#    #+#             */
-/*   Updated: 2024/02/27 14:22:04 by mgiovana         ###   ########.fr       */
+/*   Created: 2024/02/29 14:36:24 by mgiovana          #+#    #+#             */
+/*   Updated: 2024/02/29 14:36:27 by mgiovana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
 
-#include "Animal.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-class Cat : public Animal
+#include <iostream>
+#include <string>
+
+class Brain
 {
-    private:
-    
     public:
-        Cat();
-        ~Cat();
-        Cat(Cat const &src);
-        Cat &   operator=(Cat const &src);
+        Brain();
+        ~Brain();
+        Brain(Brain const &src);
+        Brain & operator=( Brain const &src);
 
-        void makeSound() const;
     private:
-        std::string type;
+        std::string ideas[100];
 };
-
 
 #endif
