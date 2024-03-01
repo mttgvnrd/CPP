@@ -13,10 +13,10 @@
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal::Animal("Dog")
+Dog::Dog() : AAnimal::AAnimal("Dog")
 {
     std::cout << "Dog constructor" << std::endl;
-	this->type = Animal::getType();
+	this->type = AAnimal::getType();
     this->brain = new Brain();
 }
 
@@ -26,7 +26,7 @@ Dog::~Dog()
     std::cout << "Dog destructor" << std::endl;
 }
 
-Dog::Dog(Dog const &src) : Animal::Animal(src)
+Dog::Dog(Dog const &src) : AAnimal::AAnimal(src)
 {
     std::cout << "Dog Copy constructor" << std::endl;
 	*this = src;

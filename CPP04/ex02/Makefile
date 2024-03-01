@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = AnimalsIdeas
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJ_DIR = ./.obj/
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

@@ -12,10 +12,10 @@
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal::Animal("Cat")
+Cat::Cat() : AAnimal::AAnimal("Cat")
 {
     std::cout << "Cat constructor" << std::endl;
-	this->type = Animal::getType();
+	this->type = AAnimal::getType();
     this->brain = new Brain();
 }
 
@@ -25,7 +25,7 @@ Cat::~Cat()
     std::cout << "Cat destructor" << std::endl;
 }
 
-Cat::Cat(Cat const &src) : Animal::Animal(src)
+Cat::Cat(Cat const &src) : AAnimal::AAnimal(src)
 {
     std::cout << "Cat Copy constructor" << std::endl;
 	*this = src;

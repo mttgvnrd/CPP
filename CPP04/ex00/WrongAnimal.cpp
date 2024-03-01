@@ -20,7 +20,7 @@ WrongAnimal::WrongAnimal() : type("[WrongAnimal]general")
 
 WrongAnimal::WrongAnimal(std::string type) : type(type)
 {
-    std::cout << "WrongAnimal type constructor: " << this->type << std::endl;
+    std::cout << "WrongAnimal type constructor" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()

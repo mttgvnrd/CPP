@@ -10,30 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
 
 
-int	main() {
-	Animal	*array[100];
-	int		i = 0;
+int main()
+{
+	//const AAnimal* meta = new AAnimal();
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
+	const WrongAnimal* x = new WrongCat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	std::cout << x->getType() << " " << std::endl;
 
-	while (i < 50)
-		array[i++] = new Dog();
-	while (i < 100)
-		array[i++] = new Cat();
-	std::cout << "---------Random pick---------" << std::endl;
-	array[22]->makeSound();
-	array[89]->makeSound();
-	for (i = 0; i < 100; i++)
-        delete array[i];
-		
-	return 0;
+	i->makeSound();
+	j->makeSound();
+	x->makeSound();
+
+	delete j;
+	delete i;
+	delete x;
+
+    return 0;
 }
-
 
 /*
 int main()
